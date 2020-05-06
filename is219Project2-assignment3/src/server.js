@@ -18,7 +18,7 @@ app.get('/api/v1/cities', function(req, res) {
     });
     connection.connect();
 
-    connection.query('SELECT * FROM tblCitiesImport', function (err, rows, fields) {
+    connection.query('SELECT * FROM mlb', function (err, rows, fields) {
         if (err) throw err;
         res.json({ "data": rows});
     })
